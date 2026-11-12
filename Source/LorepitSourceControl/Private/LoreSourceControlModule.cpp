@@ -73,7 +73,7 @@ class FLoreSourceControlCommands final : public TCommands<FLoreSourceControlComm
 {
 public:
 	FLoreSourceControlCommands()
-		: TCommands("LoreSourceControl", LOCTEXT("LoreSourceControlCommands", "Lore Source Control"), NAME_None, FAppStyle::GetAppStyleSetName())
+		: TCommands("LorepitSourceControl", LOCTEXT("LoreSourceControlCommands", "Lore Source Control"), NAME_None, FAppStyle::GetAppStyleSetName())
 	{
 	}
 
@@ -444,10 +444,10 @@ TSharedRef<SWidget> FLoreSourceControlModule::GenerateBranchMenu()
 
 	if (!BranchMenuStyle)
 	{
-		BranchMenuStyle = MakeShared<FSlateStyleSet>("LoreSourceControl.BranchMenu");
+		BranchMenuStyle = MakeShared<FSlateStyleSet>("LorepitSourceControl.BranchMenu");
 		BranchMenuStyle->SetParentStyleName(FAppStyle::GetAppStyleSetName());
 		const FSlateBrush& SyncBrush = *FRevisionControlStyleManager::Get().GetBrush("RevisionControl.Actions.Sync");
-		BranchMenuStyle->Set("LoreSourceControl.SyncAction", FCheckBoxStyle().SetUncheckedImage(SyncBrush).SetUncheckedHoveredImage(SyncBrush));
+		BranchMenuStyle->Set("LorepitSourceControl.SyncAction", FCheckBoxStyle().SetUncheckedImage(SyncBrush).SetUncheckedHoveredImage(SyncBrush));
 	}
 
 	const TSharedRef<FUICommandList> BranchMenuCommandList = MakeShared<FUICommandList>();
@@ -455,7 +455,7 @@ TSharedRef<SWidget> FLoreSourceControlModule::GenerateBranchMenu()
 	FMenuBuilder MenuBuilder(true, BranchMenuCommandList, TSharedPtr<FExtender>(), false, BranchMenuStyle.Get());
 
 	MenuBuilder.BeginSection("LoreActions", LOCTEXT("BranchSwitcherMenuActions", "Actions"));
-	MenuBuilder.SetCheckBoxStyle("LoreSourceControl.SyncAction");
+	MenuBuilder.SetCheckBoxStyle("LorepitSourceControl.SyncAction");
 	MenuBuilder.AddMenuEntry(FLoreSourceControlCommands::Get().Sync);
 	MenuBuilder.SetCheckBoxStyle(NAME_None);
 	if (BranchState == ELoreBranchCacheState::Failed)
@@ -641,6 +641,6 @@ void FLoreSourceControlModule::SaveSettings() const
 	LoreSourceControlProvider.SaveSettings();
 }
 
-IMPLEMENT_MODULE(FLoreSourceControlModule, LoreSourceControl);
+IMPLEMENT_MODULE(FLoreSourceControlModule, LorepitSourceControl);
 
 #undef LOCTEXT_NAMESPACE

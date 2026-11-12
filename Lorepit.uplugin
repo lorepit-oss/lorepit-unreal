@@ -2,20 +2,19 @@
 	"FileVersion" : 3,
 	"Version" : 1,
 	"VersionName" : "1.0",
-	"FriendlyName" : "Lore",
-	"Description" : "Lore source control management for Unreal Engine.",
+	"FriendlyName" : "Lorepit",
+	"Description" : "Lore revision control for Unreal Engine, with lorepit features. An open-source fork of Lore Source Control by Solessfir (MIT).",
 	"Category" : "Source Control",
-	"CreatedBy" : "Solessfir",
-	"CreatedByURL" : "https://github.com/Solessfir",
-	"DocsURL" : "https://github.com/Solessfir/LoreSourceControl",
-	"MarketplaceURL" : "https://fab.com/s/34bd22b20f98",
+	"CreatedBy" : "lorepit (forked from Solessfir's Lore Source Control)",
+	"CreatedByURL" : "https://lorepit.com",
+	"DocsURL" : "",
 	"EnabledByDefault" : true,
 	"CanContainContent" : false,
 	"Installed" : false,
 	"Modules" :
 	[
 		{
-			"Name" : "LoreSourceControl",
+			"Name" : "LorepitSourceControl",
 			"Type" : "Editor",
 			"LoadingPhase" : "Default",
 			"PlatformAllowList": [
@@ -25,7 +24,7 @@
             ]
 		},
 		{
-			"Name" : "LoreSourceControlTests",
+			"Name" : "LorepitSourceControlTests",
 			"Type" : "Editor",
 			"LoadingPhase" : "Default",
 			"PlatformAllowList": [

@@ -106,7 +106,7 @@ namespace
 	}
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLocalSubmitWorkerTest, "LoreSourceControl.Workers.CheckIn.LocalCommit", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLocalSubmitWorkerTest, "Lorepit.Workers.CheckIn.LocalCommit", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreLocalSubmitWorkerTest::RunTest(const FString& Parameters)
 {
@@ -125,7 +125,7 @@ bool FLoreLocalSubmitWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLiteralCommitDescriptionWorkerTest, "LoreSourceControl.Workers.CheckIn.LiteralDescription", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLiteralCommitDescriptionWorkerTest, "Lorepit.Workers.CheckIn.LiteralDescription", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreLiteralCommitDescriptionWorkerTest::RunTest(const FString& Parameters)
 {
@@ -141,7 +141,7 @@ bool FLoreLiteralCommitDescriptionWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreRemoteSubmitWorkerTest, "LoreSourceControl.Workers.CheckIn.RemotePush", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreRemoteSubmitWorkerTest, "Lorepit.Workers.CheckIn.RemotePush", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreRemoteSubmitWorkerTest::RunTest(const FString& Parameters)
 {
@@ -154,7 +154,7 @@ bool FLoreRemoteSubmitWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLorePushFailureWorkerTest, "LoreSourceControl.Workers.CheckIn.PushFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLorePushFailureWorkerTest, "Lorepit.Workers.CheckIn.PushFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLorePushFailureWorkerTest::RunTest(const FString& Parameters)
 {
@@ -169,7 +169,7 @@ bool FLorePushFailureWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnlockFailureSubmitWorkerTest, "LoreSourceControl.Workers.CheckIn.UnlockFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnlockFailureSubmitWorkerTest, "Lorepit.Workers.CheckIn.UnlockFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreUnlockFailureSubmitWorkerTest::RunTest(const FString& Parameters)
 {
@@ -184,7 +184,7 @@ bool FLoreUnlockFailureSubmitWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnexpectedStageWorkerTest, "LoreSourceControl.Workers.CheckIn.UnexpectedStage", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnexpectedStageWorkerTest, "Lorepit.Workers.CheckIn.UnexpectedStage", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreUnexpectedStageWorkerTest::RunTest(const FString& Parameters)
 {
@@ -198,7 +198,7 @@ bool FLoreUnexpectedStageWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAnonymousLockWorkerTest, "LoreSourceControl.Workers.CheckIn.AnonymousOwnLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAnonymousLockWorkerTest, "Lorepit.Workers.CheckIn.AnonymousOwnLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreAnonymousLockWorkerTest::RunTest(const FString& Parameters)
 {
@@ -213,7 +213,7 @@ bool FLoreAnonymousLockWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAuthenticatedLockWorkerTest, "LoreSourceControl.Workers.CheckIn.AuthenticatedOwnLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAuthenticatedLockWorkerTest, "Lorepit.Workers.CheckIn.AuthenticatedOwnLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreAuthenticatedLockWorkerTest::RunTest(const FString& Parameters)
 {
@@ -227,7 +227,7 @@ bool FLoreAuthenticatedLockWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCommitIdentityForeignLockWorkerTest, "LoreSourceControl.Workers.CheckIn.CommitIdentityIsNotLockIdentity", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCommitIdentityForeignLockWorkerTest, "Lorepit.Workers.CheckIn.CommitIdentityIsNotLockIdentity", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCommitIdentityForeignLockWorkerTest::RunTest(const FString& Parameters)
 {
@@ -241,7 +241,7 @@ bool FLoreCommitIdentityForeignLockWorkerTest::RunTest(const FString& Parameters
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreForeignLockWorkerTest, "LoreSourceControl.Workers.CheckIn.ForeignLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreForeignLockWorkerTest, "Lorepit.Workers.CheckIn.ForeignLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreForeignLockWorkerTest::RunTest(const FString& Parameters)
 {
@@ -255,7 +255,7 @@ bool FLoreForeignLockWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLockQueryFailureWorkerTest, "LoreSourceControl.Workers.CheckIn.LockQueryFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLockQueryFailureWorkerTest, "Lorepit.Workers.CheckIn.LockQueryFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreLockQueryFailureWorkerTest::RunTest(const FString& Parameters)
 {
@@ -270,7 +270,7 @@ bool FLoreLockQueryFailureWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreStageFailureWorkerTest, "LoreSourceControl.Workers.CheckIn.StageFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreStageFailureWorkerTest, "Lorepit.Workers.CheckIn.StageFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreStageFailureWorkerTest::RunTest(const FString& Parameters)
 {
@@ -285,7 +285,7 @@ bool FLoreStageFailureWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnstageFailureWorkerTest, "LoreSourceControl.Workers.UnstageFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreUnstageFailureWorkerTest, "Lorepit.Workers.UnstageFailure", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreUnstageFailureWorkerTest::RunTest(const FString& Parameters)
 {
@@ -331,7 +331,7 @@ bool FLoreUnstageFailureWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCheckoutScopeWorkerTest, "LoreSourceControl.Workers.CheckOut.SelectedScope", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCheckoutScopeWorkerTest, "Lorepit.Workers.CheckOut.SelectedScope", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCheckoutScopeWorkerTest::RunTest(const FString& Parameters)
 {
@@ -393,7 +393,7 @@ bool FLoreCheckoutScopeWorkerTest::RunTest(const FString& Parameters)
 
 #if PLATFORM_LINUX
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseDistinctStageWorkerTest, "LoreSourceControl.Workers.CheckIn.CaseDistinctStage", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseDistinctStageWorkerTest, "Lorepit.Workers.CheckIn.CaseDistinctStage", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCaseDistinctStageWorkerTest::RunTest(const FString& Parameters)
 {
@@ -408,7 +408,7 @@ bool FLoreCaseDistinctStageWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseDistinctLockWorkerTest, "LoreSourceControl.Workers.CheckIn.CaseDistinctLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseDistinctLockWorkerTest, "Lorepit.Workers.CheckIn.CaseDistinctLock", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCaseDistinctLockWorkerTest::RunTest(const FString& Parameters)
 {
@@ -423,14 +423,14 @@ bool FLoreCaseDistinctLockWorkerTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseSensitiveCacheScopeTest, "LoreSourceControl.Cache.CaseSensitiveScopes", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseSensitiveCacheScopeTest, "Lorepit.Cache.CaseSensitiveScopes", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCaseSensitiveCacheScopeTest::RunTest(const FString& Parameters)
 {
 	ISourceControlProvider* RegisteredProvider = nullptr;
 	for (ISourceControlProvider* Candidate : IModularFeatures::Get().GetModularFeatureImplementations<ISourceControlProvider>(TEXT("SourceControl")))
 	{
-		if (Candidate->GetName() == FName(TEXT("Lore")))
+		if (Candidate->GetName() == FName(TEXT("Lorepit")))
 		{
 			RegisteredProvider = Candidate;
 			break;

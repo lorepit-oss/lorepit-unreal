@@ -60,7 +60,7 @@ namespace
 	};
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderPathScopeTest, "LoreSourceControl.Provider.PathScopes", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderPathScopeTest, "Lorepit.Provider.PathScopes", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreProviderPathScopeTest::RunTest(const FString& Parameters)
 {
@@ -90,7 +90,7 @@ bool FLoreProviderPathScopeTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderCloseTest, "LoreSourceControl.Provider.CloseCompletesQueuedOperations", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderCloseTest, "Lorepit.Provider.CloseCompletesQueuedOperations", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreProviderCloseTest::RunTest(const FString& Parameters)
 {
@@ -166,7 +166,7 @@ bool FLoreProviderCloseTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderCloseResultsTest, "LoreSourceControl.Provider.CloseAppliesCompletedResults", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreProviderCloseResultsTest, "Lorepit.Provider.CloseAppliesCompletedResults", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreProviderCloseResultsTest::RunTest(const FString& Parameters)
 {

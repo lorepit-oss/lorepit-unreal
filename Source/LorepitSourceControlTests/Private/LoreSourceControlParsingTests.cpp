@@ -23,7 +23,7 @@ namespace
 	}
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreStatusParserTest, "LoreSourceControl.Status.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreStatusParserTest, "Lorepit.Status.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreStatusParserTest::RunTest(const FString& Parameters)
 {
@@ -72,7 +72,7 @@ bool FLoreStatusParserTest::RunTest(const FString& Parameters)
 
 #if PLATFORM_LINUX
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseSensitivePathParserTest, "LoreSourceControl.Paths.CaseSensitiveParsing", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCaseSensitivePathParserTest, "Lorepit.Paths.CaseSensitiveParsing", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCaseSensitivePathParserTest::RunTest(const FString& Parameters)
 {
@@ -106,7 +106,7 @@ bool FLoreCaseSensitivePathParserTest::RunTest(const FString& Parameters)
 
 #endif
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreHistoryParserTest, "LoreSourceControl.History.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreHistoryParserTest, "Lorepit.History.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreHistoryParserTest::RunTest(const FString& Parameters)
 {
@@ -133,7 +133,7 @@ bool FLoreHistoryParserTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreBranchParserTest, "LoreSourceControl.Branches.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreBranchParserTest, "Lorepit.Branches.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreBranchParserTest::RunTest(const FString& Parameters)
 {
@@ -155,7 +155,7 @@ bool FLoreBranchParserTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLockParserTest, "LoreSourceControl.Locks.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreLockParserTest, "Lorepit.Locks.Parser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreLockParserTest::RunTest(const FString& Parameters)
 {
@@ -177,7 +177,7 @@ bool FLoreLockParserTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCommandErrorParserTest, "LoreSourceControl.Commands.ErrorParser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreCommandErrorParserTest, "Lorepit.Commands.ErrorParser", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreCommandErrorParserTest::RunTest(const FString& Parameters)
 {
@@ -205,7 +205,7 @@ bool FLoreCommandErrorParserTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreChangedPathClassifierTest, "LoreSourceControl.Paths.Classifier", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreChangedPathClassifierTest, "Lorepit.Paths.Classifier", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreChangedPathClassifierTest::RunTest(const FString& Parameters)
 {
@@ -226,7 +226,7 @@ bool FLoreChangedPathClassifierTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAuthIdentityParserTest, "LoreSourceControl.Locks.AuthIdentity", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreAuthIdentityParserTest, "Lorepit.Locks.AuthIdentity", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreAuthIdentityParserTest::RunTest(const FString& Parameters)
 {

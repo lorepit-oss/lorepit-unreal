@@ -6,7 +6,7 @@
 #include "ISourceControlState.h"
 #include "LoreSourceControlRevision.h"
 
-class LORESOURCECONTROL_API FLoreSourceControlState : public ISourceControlState
+class LOREPITSOURCECONTROL_API FLoreSourceControlState : public ISourceControlState
 {
 public:
 	explicit FLoreSourceControlState(const FString& InLocalFilename)

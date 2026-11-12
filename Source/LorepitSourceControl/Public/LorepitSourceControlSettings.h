@@ -5,15 +5,15 @@
 #include "CoreMinimal.h"
 #include "Engine/DeveloperSettings.h"
 #include "UObject/SoftObjectPath.h"
-#include "LoreSourceControlSettings.generated.h"
+#include "LorepitSourceControlSettings.generated.h"
 
-UCLASS(Config = "EditorPerProjectUserSettings", Meta = (DisplayName = "Lore Source Control"))
-class ULoreSourceControlSettings : public UDeveloperSettings
+UCLASS(Config = "EditorPerProjectUserSettings", Meta = (DisplayName = "Lorepit Source Control"))
+class ULorepitSourceControlSettings : public UDeveloperSettings
 {
     GENERATED_BODY()
 
 public:
-    ULoreSourceControlSettings()
+    ULorepitSourceControlSettings()
     {
         CategoryName = FName("Plugins");
     }

@@ -56,7 +56,7 @@ namespace
 	}
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreTemporaryRepositoryIntegrationTest, "LoreSourceControl.Integration.TemporaryRepository", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreTemporaryRepositoryIntegrationTest, "Lorepit.Integration.TemporaryRepository", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreTemporaryRepositoryIntegrationTest::RunTest(const FString& Parameters)
 {
@@ -229,7 +229,7 @@ bool FLoreTemporaryRepositoryIntegrationTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreArgumentRoundTripIntegrationTest, "LoreSourceControl.Integration.ArgumentRoundTrip", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreArgumentRoundTripIntegrationTest, "Lorepit.Integration.ArgumentRoundTrip", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreArgumentRoundTripIntegrationTest::RunTest(const FString& Parameters)
 {
@@ -340,7 +340,7 @@ bool FLoreArgumentRoundTripIntegrationTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreDeleteRevertIntegrationTest, "LoreSourceControl.Integration.DeleteRevert", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreDeleteRevertIntegrationTest, "Lorepit.Integration.DeleteRevert", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreDeleteRevertIntegrationTest::RunTest(const FString& Parameters)
 {
@@ -354,7 +354,7 @@ bool FLoreDeleteRevertIntegrationTest::RunTest(const FString& Parameters)
 	FLoreSourceControlProvider* Provider = nullptr;
 	for (ISourceControlProvider* Candidate : IModularFeatures::Get().GetModularFeatureImplementations<ISourceControlProvider>(TEXT("SourceControl")))
 	{
-		if (Candidate->GetName() == FName(TEXT("Lore")))
+		if (Candidate->GetName() == FName(TEXT("Lorepit")))
 		{
 			Provider = static_cast<FLoreSourceControlProvider*>(Candidate);
 			break;
@@ -449,7 +449,7 @@ bool FLoreDeleteRevertIntegrationTest::RunTest(const FString& Parameters)
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreRemoteSubmitIntegrationTest, "LoreSourceControl.Integration.RemoteSubmit", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FLoreRemoteSubmitIntegrationTest, "Lorepit.Integration.RemoteSubmit", EAutomationTestFlags::EditorContext | EAutomationTestFlags::ProductFilter)
 
 bool FLoreRemoteSubmitIntegrationTest::RunTest(const FString& Parameters)
 {
@@ -484,7 +484,7 @@ bool FLoreRemoteSubmitIntegrationTest::RunTest(const FString& Parameters)
 	FLoreSourceControlProvider* Provider = nullptr;
 	for (ISourceControlProvider* Candidate : IModularFeatures::Get().GetModularFeatureImplementations<ISourceControlProvider>(TEXT("SourceControl")))
 	{
-		if (Candidate->GetName() == FName(TEXT("Lore")))
+		if (Candidate->GetName() == FName(TEXT("Lorepit")))
 		{
 			Provider = static_cast<FLoreSourceControlProvider*>(Candidate);
 			break;

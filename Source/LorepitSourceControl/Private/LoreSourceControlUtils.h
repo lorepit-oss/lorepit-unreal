@@ -57,14 +57,14 @@ using TLorePathMap = TMap<FString, ValueType, FDefaultSetAllocator, TLorePathMap
 using FLorePathSet = TSet<FString, FLorePathSetKeyFuncs>;
 
 /** One entry from "lore branch list" */
-struct LORESOURCECONTROL_API FLoreBranchInfo
+struct LOREPITSOURCECONTROL_API FLoreBranchInfo
 {
 	FString Name;
 	bool bIsCurrent = false;
 };
 
 /** Repository-level facts extracted from one "lore status" run, alongside the per-file states. */
-struct LORESOURCECONTROL_API FLoreStatusSummary
+struct LOREPITSOURCECONTROL_API FLoreStatusSummary
 {
 	/** Current branch, from the "repositoryStatusRevision" event (empty if not reported) */
 	FString BranchName;
@@ -77,7 +77,7 @@ struct LORESOURCECONTROL_API FLoreStatusSummary
 };
 
 /** A Lore lock owner, retaining both the stable identity and its human-readable name. */
-struct LORESOURCECONTROL_API FLoreLockOwner
+struct LOREPITSOURCECONTROL_API FLoreLockOwner
 {
 	FString Identity;
 	FString DisplayName;
@@ -91,28 +91,28 @@ struct LORESOURCECONTROL_API FLoreLockOwner
 namespace FLoreSourceControlUtils
 {
 	/** Quote one command-line argument without changing its value. */
-	LORESOURCECONTROL_API FString QuoteCommandLineArgument(const FString& InArgument);
+	LOREPITSOURCECONTROL_API FString QuoteCommandLineArgument(const FString& InArgument);
 
 	/**
 	 * Returns the effective path (or command name) to use for the lore executable.
 	 *
 	 * Priority:
-	 *   1. User-specified path from ULoreSourceControlSettings (Project Settings)
+	 *   1. User-specified path from ULorepitSourceControlSettings (Project Settings)
 	 *   2. "lore" / "lore.exe" if available via system PATH (tried by executing)
 	 *   3. Default install location: C:/Program Files/lore/lore.exe (and variants)
 	 *   4. Bare "lore.exe" as last resort
 	 */
-	LORESOURCECONTROL_API FString FindLoreBinaryPath();
+	LOREPITSOURCECONTROL_API FString FindLoreBinaryPath();
 
 	/**
 	 * Read the top-level "remote_url" and "identity" scalars out of ".lore/config.toml".
 	 * Returns false only if the file could not be read; either output may still be empty
 	 * (e.g. identity is unset until the first commit, or the repo was created fully offline).
 	 */
-	LORESOURCECONTROL_API bool ReadRepositoryConfig(const FString& InRepositoryRoot, FString& OutRemoteUrl, FString& OutIdentity);
+	LOREPITSOURCECONTROL_API bool ReadRepositoryConfig(const FString& InRepositoryRoot, FString& OutRemoteUrl, FString& OutIdentity);
 
 	/** Run "lore --version" and parse the reported version. */
-	LORESOURCECONTROL_API bool CheckLoreAvailability(const FString& InLoreBinaryPath, FString* OutVersion = nullptr);
+	LOREPITSOURCECONTROL_API bool CheckLoreAvailability(const FString& InLoreBinaryPath, FString* OutVersion = nullptr);
 
 	/**
 	 * Find the lore repository root by walking up looking for a ".lore" directory.
@@ -126,7 +126,7 @@ namespace FLoreSourceControlUtils
 	 * OutResults - pass false only to get lore's own human-readable text (e.g. for printing status
 	 * straight to the log), never for a result this module intends to parse itself.
 	 */
-	LORESOURCECONTROL_API bool RunLoreCommand(const FString& InCommand, const FString& InLoreBinary, const FString& InRepositoryRoot, const TArray<FString>& InParameters, const TArray<FString>& InFiles, TArray<FString>& OutResults, TArray<FString>& OutErrorMessages, bool bUseJson = true);
+	LOREPITSOURCECONTROL_API bool RunLoreCommand(const FString& InCommand, const FString& InLoreBinary, const FString& InRepositoryRoot, const TArray<FString>& InParameters, const TArray<FString>& InFiles, TArray<FString>& OutResults, TArray<FString>& OutErrorMessages, bool bUseJson = true);
 
 	/**
 	 * Run "lore status" (with --scan recommended for accuracy) and parse results into states.
@@ -141,30 +141,30 @@ namespace FLoreSourceControlUtils
 	 * Parser for lore status --json output. Populates per-file states and, if OutSummary is given,
 	 * the repository-level facts (branch name, dirty/behind-remote flags) from the same single pass.
 	 */
-	LORESOURCECONTROL_API void ParseStatusResults(const FString& InResults, const TArray<FString>& InFiles, const FString& InRepositoryRoot, TArray<FLoreSourceControlState>& OutStates, FLoreStatusSummary* OutSummary = nullptr);
+	LOREPITSOURCECONTROL_API void ParseStatusResults(const FString& InResults, const TArray<FString>& InFiles, const FString& InRepositoryRoot, TArray<FLoreSourceControlState>& OutStates, FLoreStatusSummary* OutSummary = nullptr);
 
 	/** Parse structured error events emitted by a Lore command. */
-	LORESOURCECONTROL_API void ParseCommandErrors(const TArray<FString>& InResults, TArray<FString>& OutErrorMessages);
+	LOREPITSOURCECONTROL_API void ParseCommandErrors(const TArray<FString>& InResults, TArray<FString>& OutErrorMessages);
 
 	/** Remove the optional owner-name lookup failure emitted after a successful lock query. */
-	LORESOURCECONTROL_API void RemoveOptionalLockQueryErrors(bool bLockQuerySucceeded, TArray<FString>& InOutErrorMessages);
+	LOREPITSOURCECONTROL_API void RemoveOptionalLockQueryErrors(bool bLockQuerySucceeded, TArray<FString>& InOutErrorMessages);
 
 	/** Parse Lore file-history events and their following metadata events. */
-	LORESOURCECONTROL_API void ParseHistoryResults(const TArray<FString>& InResults, const FString& InLoreBinary, const FString& InRepositoryRoot, const FString& InFile, FLoreSourceControlHistory& OutHistory);
+	LOREPITSOURCECONTROL_API void ParseHistoryResults(const TArray<FString>& InResults, const FString& InLoreBinary, const FString& InRepositoryRoot, const FString& InFile, FLoreSourceControlHistory& OutHistory);
 
 	/** Parse and deduplicate Lore branch-list entries. */
-	LORESOURCECONTROL_API void ParseBranchResults(const TArray<FString>& InResults, TArray<FLoreBranchInfo>& OutBranches);
+	LOREPITSOURCECONTROL_API void ParseBranchResults(const TArray<FString>& InResults, TArray<FLoreBranchInfo>& OutBranches);
 
 	/** Parse lock-query results and optional owner display names. */
-	LORESOURCECONTROL_API void ParseLockResults(const TArray<FString>& InResults, const FString& InRepositoryRoot, TLorePathMap<FLoreLockOwner>& OutLockedBy);
-	LORESOURCECONTROL_API bool ParseAuthIdentity(const TArray<FString>& InResults, FString& OutIdentity);
+	LOREPITSOURCECONTROL_API void ParseLockResults(const TArray<FString>& InResults, const FString& InRepositoryRoot, TLorePathMap<FLoreLockOwner>& OutLockedBy);
+	LOREPITSOURCECONTROL_API bool ParseAuthIdentity(const TArray<FString>& InResults, FString& OutIdentity);
 
 	/**
 	 * Run `lore file history <path>` and parse it into revision history entries, combining each
 	 * "fileHistory" event with the "metadata" events (message/created-by/timestamp) that follow it -
 	 * Lore reports commit message/author/date as separate metadata events, not on the history entry itself.
 	 */
-	LORESOURCECONTROL_API bool RunGetHistory(const FString& InLoreBinary, const FString& InRepositoryRoot, const FString& InFile, TArray<FString>& OutErrorMessages, FLoreSourceControlHistory& OutHistory);
+	LOREPITSOURCECONTROL_API bool RunGetHistory(const FString& InLoreBinary, const FString& InRepositoryRoot, const FString& InFile, TArray<FString>& OutErrorMessages, FLoreSourceControlHistory& OutHistory);
 
 	/**
 	 * Run `lore branch list` (local branches only) and parse the resulting "branchListEntry" events.
@@ -189,7 +189,7 @@ namespace FLoreSourceControlUtils
 	 * (returns true - needs an editor restart) vs plain Content paths (returned via OutContentPaths,
 	 * safe to hot-reload). Shared by branch switch and sync, which both need this same classification.
 	 */
-	LORESOURCECONTROL_API bool ClassifyChangedPaths(const TArray<FString>& InPaths, TArray<FString>& OutContentPaths);
+	LOREPITSOURCECONTROL_API bool ClassifyChangedPaths(const TArray<FString>& InPaths, TArray<FString>& OutContentPaths);
 
 	/**
 	 * Run `lore sync` and classify the "revisionSyncFile" events it reports the same way a branch
@@ -203,10 +203,10 @@ namespace FLoreSourceControlUtils
 	 * Unlike "lock status", this needs no file list - it lists every locked path in one call,
 	 * which is what both a broad refresh and a single-file one actually need.
 	 */
-	LORESOURCECONTROL_API bool GetLoreLockStatus(const FString& InLoreBinary, const FString& InRepositoryRoot, const FLoreSourceControlProvider& InProvider, TLorePathMap<FLoreLockOwner>& OutLockedBy, TArray<FString>* OutErrorMessages = nullptr, FString* OutOwnIdentity = nullptr);
+	LOREPITSOURCECONTROL_API bool GetLoreLockStatus(const FString& InLoreBinary, const FString& InRepositoryRoot, const FLoreSourceControlProvider& InProvider, TLorePathMap<FLoreLockOwner>& OutLockedBy, TArray<FString>* OutErrorMessages = nullptr, FString* OutOwnIdentity = nullptr);
 
 	/** Return every staged file and directory in the repository as normalized absolute paths. */
-	LORESOURCECONTROL_API bool RunGetStagedPaths(const FString& InLoreBinary, const FString& InRepositoryRoot, TArray<FString>& OutStagedFiles, TArray<FString>& OutStagedDirectories, TArray<FString>& OutErrorMessages);
+	LOREPITSOURCECONTROL_API bool RunGetStagedPaths(const FString& InLoreBinary, const FString& InRepositoryRoot, TArray<FString>& OutStagedFiles, TArray<FString>& OutStagedDirectories, TArray<FString>& OutErrorMessages);
 
 	/**
 	 * Settings using UDeveloperSettings (Project Settings > Plugins > Lore Source Control).
@@ -216,7 +216,7 @@ namespace FLoreSourceControlUtils
 	void SaveSettings(const FString& InLoreBinaryPath);
 
 	/**
-	 * Get the user-configured binary path from ULoreSourceControlSettings (may be empty).
+	 * Get the user-configured binary path from ULorepitSourceControlSettings (may be empty).
 	 */
 	FString GetUserConfiguredLoreBinaryPath();
 
@@ -226,7 +226,7 @@ namespace FLoreSourceControlUtils
 	void SetUserConfiguredLoreBinaryPath(const FString& InPath);
 
 	/**
-	 * Whether Check Out/Revert/Submit should actually acquire/release Lore locks (ULoreSourceControlSettings::bLockFiles).
+	 * Whether Check Out/Revert/Submit should actually acquire/release Lore locks (ULorepitSourceControlSettings::bLockFiles).
 	 */
 	bool ShouldLockFiles();
 	void SetShouldLockFiles(bool bShouldLockFiles);

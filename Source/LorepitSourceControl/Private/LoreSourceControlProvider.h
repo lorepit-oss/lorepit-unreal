@@ -18,7 +18,7 @@ enum class ELoreBranchCacheState : uint8
 	Failed
 };
 
-class LORESOURCECONTROL_API FLoreSourceControlProvider : public ISourceControlProvider
+class LOREPITSOURCECONTROL_API FLoreSourceControlProvider : public ISourceControlProvider
 {
 public:
 	/* ISourceControlProvider implementation */

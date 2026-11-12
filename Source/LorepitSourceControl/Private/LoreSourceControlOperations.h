@@ -66,7 +66,7 @@ public:
 };
 
 /** CheckIn / Commit */
-class LORESOURCECONTROL_API FLoreCheckInWorker : public ILoreSourceControlWorker
+class LOREPITSOURCECONTROL_API FLoreCheckInWorker : public ILoreSourceControlWorker
 {
 public:
 	virtual FName GetName() const override { return "CheckIn"; }
@@ -107,7 +107,7 @@ public:
 };
 
 /** CheckOut (acquire lock) */
-class LORESOURCECONTROL_API FLoreCheckOutWorker : public ILoreSourceControlWorker
+class LOREPITSOURCECONTROL_API FLoreCheckOutWorker : public ILoreSourceControlWorker
 {
 public:
 	virtual FName GetName() const override { return "CheckOut"; }
@@ -118,7 +118,7 @@ public:
 };
 
 /** Revert */
-class LORESOURCECONTROL_API FLoreRevertWorker : public ILoreSourceControlWorker
+class LOREPITSOURCECONTROL_API FLoreRevertWorker : public ILoreSourceControlWorker
 {
 public:
 	virtual FName GetName() const override { return "Revert"; }
@@ -140,7 +140,7 @@ public:
 };
 
 /** Delete */
-class LORESOURCECONTROL_API FLoreDeleteWorker : public ILoreSourceControlWorker
+class LOREPITSOURCECONTROL_API FLoreDeleteWorker : public ILoreSourceControlWorker
 {
 public:
 	virtual FName GetName() const override { return "Delete"; }

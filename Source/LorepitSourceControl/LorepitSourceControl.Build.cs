@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class LoreSourceControl : ModuleRules
+public class LorepitSourceControl : ModuleRules
 {
-	public LoreSourceControl(ReadOnlyTargetRules Target) : base(Target)
+	public LorepitSourceControl(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

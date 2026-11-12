@@ -399,7 +399,7 @@ bool FLoreCheckOutWorker::Execute(FLoreSourceControlCommand& InCommand)
 	}
 	else
 	{
-		// With ULoreSourceControlSettings::bLockFiles disabled, Check Out only needs to make the files editable locally.
+		// With ULorepitSourceControlSettings::bLockFiles disabled, Check Out only needs to make the files editable locally.
 		// The files are already editable because Lore never enforces local read-only state, so there is nothing to do here.
 		InCommand.bCommandSuccessful = true;
 	}

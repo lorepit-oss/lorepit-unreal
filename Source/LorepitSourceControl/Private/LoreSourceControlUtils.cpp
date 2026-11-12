@@ -3,7 +3,7 @@
 #include "LoreSourceControlUtils.h"
 #include "LoreSourceControlState.h"
 #include "LoreSourceControlProvider.h"
-#include "LoreSourceControlSettings.h"
+#include "LorepitSourceControlSettings.h"
 #include "ISourceControlModule.h"
 #include "Misc/Paths.h"
 #include "Misc/ConfigCacheIni.h"
@@ -1342,7 +1342,7 @@ namespace FLoreSourceControlUtils
 
 	FString GetUserConfiguredLoreBinaryPath()
 	{
-		if (const ULoreSourceControlSettings* Settings = GetDefault<ULoreSourceControlSettings>())
+		if (const ULorepitSourceControlSettings* Settings = GetDefault<ULorepitSourceControlSettings>())
 		{
 			return Settings->GetConfiguredBinaryPath();
 		}
@@ -1351,7 +1351,7 @@ namespace FLoreSourceControlUtils
 
 	void SetUserConfiguredLoreBinaryPath(const FString& InPath)
 	{
-		if (ULoreSourceControlSettings* Settings = GetMutableDefault<ULoreSourceControlSettings>())
+		if (ULorepitSourceControlSettings* Settings = GetMutableDefault<ULorepitSourceControlSettings>())
 		{
 			Settings->BinaryPath.FilePath = InPath;
 			Settings->SaveConfig();
@@ -1360,7 +1360,7 @@ namespace FLoreSourceControlUtils
 
 	bool ShouldLockFiles()
 	{
-		if (const ULoreSourceControlSettings* Settings = GetDefault<ULoreSourceControlSettings>())
+		if (const ULorepitSourceControlSettings* Settings = GetDefault<ULorepitSourceControlSettings>())
 		{
 			return Settings->ShouldLockFiles();
 		}
@@ -1369,7 +1369,7 @@ namespace FLoreSourceControlUtils
 
 	void SetShouldLockFiles(bool bShouldLockFiles)
 	{
-		if (ULoreSourceControlSettings* Settings = GetMutableDefault<ULoreSourceControlSettings>())
+		if (ULorepitSourceControlSettings* Settings = GetMutableDefault<ULorepitSourceControlSettings>())
 		{
 			Settings->bLockFiles = bShouldLockFiles;
 			Settings->SaveConfig();

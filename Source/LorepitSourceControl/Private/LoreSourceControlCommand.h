@@ -18,7 +18,7 @@ struct FLoreLockOwner;
  * thread pool (see FLoreSourceControlProvider::IssueCommand) - the actual lore invocation
  * never runs on the game thread, so a slow or unresponsive binary cannot freeze the editor.
  */
-class LORESOURCECONTROL_API FLoreSourceControlCommand : public IQueuedWork
+class LOREPITSOURCECONTROL_API FLoreSourceControlCommand : public IQueuedWork
 {
 public:
 	using FRunLoreCommand = TFunction<bool(const FString&, const TArray<FString>&, const TArray<FString>&, TArray<FString>&, TArray<FString>&)>;

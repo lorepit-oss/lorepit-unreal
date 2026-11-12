@@ -3,9 +3,9 @@
 using System.IO;
 using UnrealBuildTool;
 
-public class LoreSourceControlTests : ModuleRules
+public class LorepitSourceControlTests : ModuleRules
 {
-	public LoreSourceControlTests(ReadOnlyTargetRules Target) : base(Target)
+	public LorepitSourceControlTests(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -13,11 +13,11 @@ public class LoreSourceControlTests : ModuleRules
 			new string[]
 			{
 				"Core",
-				"LoreSourceControl",
+				"LorepitSourceControl",
 				"SourceControl",
 			}
 		);
 
-		PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "..", "LoreSourceControl", "Private"));
+		PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "..", "LorepitSourceControl", "Private"));
 	}
 }

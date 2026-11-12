@@ -180,7 +180,7 @@ bool FLoreSourceControlProvider::IsLoreBinaryAvailable() const
 
 const FName& FLoreSourceControlProvider::GetName() const
 {
-	static const FName ProviderName("Lore");
+	static const FName ProviderName("Lorepit");
 	return ProviderName;
 }
 
