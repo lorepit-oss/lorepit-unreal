@@ -56,7 +56,7 @@ Once releases exist, the lorepit Hub's **Open in Unreal** installs and enables t
 Until then, build it from source:
 
 ```bash
-git clone https://github.com/<org>/lorepit-unreal.git
+git clone https://github.com/lorepit-oss/lorepit-unreal.git
 # macOS
 "/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/RunUAT.sh" BuildPlugin \
   -Plugin="$PWD/lorepit-unreal/Lorepit.uplugin" -Package="$PWD/Lorepit-Packaged" -TargetPlatforms=Mac -Rocket

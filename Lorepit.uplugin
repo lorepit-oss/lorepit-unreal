@@ -7,7 +7,7 @@
 	"Category" : "Source Control",
 	"CreatedBy" : "lorepit (forked from Solessfir's Lore Source Control)",
 	"CreatedByURL" : "https://lorepit.com",
-	"DocsURL" : "",
+	"DocsURL" : "https://github.com/lorepit-oss/lorepit-unreal",
 	"EnabledByDefault" : true,
 	"CanContainContent" : false,
 	"Installed" : false,
